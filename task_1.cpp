@@ -6,6 +6,7 @@
 
 int main()
 {
+	const double exchange_rate = 118,76;
 	SetConsoleCP(CP_UTF8);
 	SetConsoleOutputCP(CP_UTF8);
 	long double money;
@@ -14,7 +15,7 @@ int main()
 	std::cin.imbue(ruble);
 	std::cin >> std::get_money(money);
 	std::cout.imbue(euro);
-	money /= 88.18;
+	money /= exchange_rate;
 
 	std::cout << std::showbase << std::put_money(money);
 
